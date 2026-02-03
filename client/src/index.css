@@ -1,0 +1,429 @@
+/* Beautiful fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Light Mode - Beautiful Beige & Sage Green Aesthetic */
+:root {
+  --radius: 0.5rem;
+  
+  /* Background: Soft warm beige */
+  --background: 42 47% 96%;
+  --foreground: 156 35% 12%; /* Deep forest green for excellent contrast */
+  
+  /* Cards: Warm cream */
+  --card: 36 39% 92%;
+  --card-foreground: 156 35% 12%;
+  
+  /* Popover */
+  --popover: 36 39% 94%;
+  --popover-foreground: 156 35% 12%;
+  
+  /* Primary: Beautiful sage green */
+  --primary: 142 45% 40%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Light sage */
+  --secondary: 142 30% 80%;
+  --secondary-foreground: 156 35% 12%;
+  
+  /* Muted: Very light sage */
+  --muted: 142 25% 90%;
+  --muted-foreground: 156 25% 30%; /* Darker for better contrast */
+  
+  /* Accent: Medium sage */
+  --accent: 142 40% 55%;
+  --accent-foreground: 156 35% 12%;
+  
+  /* Destructive */
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Borders */
+  --border: 142 20% 82%;
+  --input: 142 20% 82%;
+  --ring: 142 45% 40%;
+  
+  /* Charts: Sage green palette */
+  --chart-1: 142 45% 50%;
+  --chart-2: 142 40% 40%;
+  --chart-3: 142 35% 30%;
+  --chart-4: 142 30% 60%;
+  --chart-5: 142 25% 70%;
+  
+  /* Sidebar */
+  --sidebar: 36 39% 92%;
+  --sidebar-foreground: 156 35% 12%;
+  --sidebar-primary: 142 45% 40%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 142 30% 80%;
+  --sidebar-accent-foreground: 156 35% 12%;
+  --sidebar-border: 142 20% 82%;
+  --sidebar-ring: 142 45% 40%;
+}
+
+/* Dark Mode - Enhanced Dark Academia with Rich, Aesthetic Colors */
+.dark {
+  /* Background: Deep, rich charcoal with warm undertones */
+  --background: 30 15% 10%;
+  --foreground: 40 60% 92%; /* Warm cream for excellent contrast */
+  
+  /* Cards: Luxurious dark brown with depth */
+  --card: 28 20% 14%;
+  --card-foreground: 40 60% 92%;
+  
+  /* Popover: Slightly elevated surface */
+  --popover: 28 22% 16%;
+  --popover-foreground: 40 60% 92%;
+  
+  /* Primary: Rich burgundy with depth */
+  --primary: 15 55% 45%;
+  --primary-foreground: 40 60% 98%;
+  
+  /* Secondary: Warm brown */
+  --secondary: 30 25% 25%;
+  --secondary-foreground: 40 60% 92%;
+  
+  /* Muted: Subtle brown */
+  --muted: 28 18% 20%;
+  --muted-foreground: 40 40% 75%; /* Lighter for better contrast */
+  
+  /* Accent: Warm amber/gold accent */
+  --accent: 35 60% 50%;
+  --accent-foreground: 30 15% 10%;
+  
+  /* Destructive */
+  --destructive: 0 70% 55%;
+  --destructive-foreground: 40 60% 98%;
+  
+  /* Borders: Subtle warm borders */
+  --border: 28 20% 24%;
+  --input: 28 20% 24%;
+  --ring: 15 55% 45%;
+  
+  /* Charts: Warm earth tone palette */
+  --chart-1: 35 60% 55%;
+  --chart-2: 25 55% 50%;
+  --chart-3: 15 55% 45%;
+  --chart-4: 10 50% 40%;
+  --chart-5: 5 45% 35%;
+  
+  /* Sidebar */
+  --sidebar: 28 20% 12%;
+  --sidebar-foreground: 40 60% 92%;
+  --sidebar-primary: 15 55% 45%;
+  --sidebar-primary-foreground: 40 60% 98%;
+  --sidebar-accent: 30 25% 25%;
+  --sidebar-accent-foreground: 40 60% 92%;
+  --sidebar-border: 28 20% 24%;
+  --sidebar-ring: 15 55% 45%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Crimson Text', 'EB Garamond', Georgia, serif;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  letter-spacing: -0.02em;
+}
+
+/* Ensure all text has proper contrast */
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.text-card-foreground {
+  color: hsl(var(--card-foreground)) !important;
+}
+
+.text-foreground {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Fix badge contrast */
+[data-slot="badge"] {
+  color: hsl(var(--foreground));
+}
+
+/* Card improvements with subtle shadow */
+[data-slot="card"] {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-color: hsl(var(--border));
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+}
+
+.dark [data-slot="card"] {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+}
+
+/* Input improvements */
+input, textarea, select {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--border));
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.8;
+}
+
+/* Button improvements */
+button {
+  color: hsl(var(--foreground));
+}
+
+/* Tab improvements */
+[role="tablist"] button {
+  color: hsl(var(--muted-foreground));
+}
+
+[role="tablist"] button[data-state="active"] {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+}
+
+/* Dropdown menu with proper background */
+[data-slot="dropdown-menu-content"] {
+  background-color: hsl(var(--popover) / 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px -10px rgb(0 0 0 / 0.4);
+}
+
+/* Dialog/Modal with proper backdrop */
+[data-slot="dialog-overlay"] {
+  background-color: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Prose for rich text editor */
+.prose {
+  color: hsl(var(--foreground));
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose p,
+.prose li,
+.prose strong {
+  color: hsl(var(--foreground));
+}
+
+.prose a {
+  color: hsl(var(--primary));
+}
+
+.prose code {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--muted));
+}
+
+.prose blockquote {
+  color: hsl(var(--muted-foreground));
+  border-left-color: hsl(var(--primary));
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Subtle paper texture for light mode */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  z-index: -1;
+}
+
+/* Subtle leather texture for dark mode */
+.dark body::before {
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* Warm glow effect for dark mode cards */
+.dark [data-slot="card"]:hover {
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 0.4), 0 0 0 1px hsl(var(--border));
+}
+
+/* Beautiful focus rings */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* TipTap Editor Fullscreen Styles */
+.ProseMirror {
+  min-height: 100%;
+  padding: 2rem;
+  outline: none;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.ProseMirror p {
+  margin: 0.5rem 0;
+}
+
+.ProseMirror h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.5rem 0 1rem;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.ProseMirror h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+.ProseMirror blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.ProseMirror code {
+  background-color: hsl(var(--muted));
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+}
+
+.ProseMirror a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+/* Note Ruling Patterns - Samsung Notes Style */
+.note-lined {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    hsl(var(--muted-foreground) / 0.15) 31px,
+    hsl(var(--muted-foreground) / 0.15) 32px
+  );
+  background-size: 100% 32px;
+}
+
+.note-grid {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      hsl(var(--muted-foreground) / 0.1) 0px,
+      hsl(var(--muted-foreground) / 0.1) 1px,
+      transparent 1px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsl(var(--muted-foreground) / 0.1) 0px,
+      hsl(var(--muted-foreground) / 0.1) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+  background-size: 32px 32px;
+}
+
+.note-dotted {
+  background-image: radial-gradient(
+    circle,
+    hsl(var(--muted-foreground) / 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
